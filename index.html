@@ -1,74 +1,69 @@
----
-import B12Link from './B12Link.astro';
----
-
-<footer class="bg-secondary text-secondary-foreground border-t border-border">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
-      {/* Company Info */}
-      <div>
-        <h3 class="text-xl font-bold mb-4 text-secondary-foreground">NextGrid Technologies</h3>
-        <p class="text-secondary-foreground/80 mb-4">
-          Fast, friendly computer support and maintenance for businesses and individuals.
-        </p>
-        <div class="space-y-2 text-sm">
-          <p>
-            <span class="font-semibold">Email:</span>
-            <a href="mailto:support@nextgridtechnologies.co.za" class="hover:text-secondary-foreground transition-colors">
-              support@nextgridtechnologies.co.za
-            </a>
-          </p>
-          <p>
-            <span class="font-semibold">Phone:</span>
-            <a href="tel:+1234567890" class="hover:text-secondary-foreground transition-colors">
-              (123) 456-7890
-            </a>
-          </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Support & Maintenance Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Computer Support & Maintenance Services</h1>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-      </div>
+    </header>
 
-      {/* Links */}
-      <div>
-        <h4 class="font-semibold mb-4 text-secondary-foreground">Quick Links</h4>
-        <ul class="space-y-2">
-          <li>
-            <a href="/" class="text-secondary-foreground/80 hover:text-secondary-foreground transition-colors">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="/about" class="text-secondary-foreground/80 hover:text-secondary-foreground transition-colors">
-              About Us
-            </a>
-          </li>
-          <li>
-            <a href="/index#contact-us" class="text-secondary-foreground/80 hover:text-secondary-foreground transition-colors">
-              Contact
-            </a>
-          </li>
-        </ul>
-      </div>
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Computer Repairs</h3>
+                    <p>Quick and reliable repair for desktops and laptops.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Software Installation</h3>
+                    <p>Install and update software safely and efficiently.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Network Setup</h3>
+                    <p>Setup and troubleshoot wired or wireless networks.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Hardware Upgrades</h3>
+                    <p>Upgrade your PC components for better performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      {/* Services Summary */}
-      <div>
-        <h4 class="font-semibold mb-4 text-secondary-foreground">Services</h4>
-        <ul class="space-y-2 text-sm">
-          <li class="text-secondary-foreground/80">Computer Troubleshooting & Repair</li>
-          <li class="text-secondary-foreground/80">Regular Maintenance & Tune-Ups</li>
-          <li class="text-secondary-foreground/80">Network & Wi‑Fi Support</li>
-          <li class="text-secondary-foreground/80">Software Installation & Updates</li>
-        </ul>
-      </div>
-    </div>
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We provide reliable computer support and maintenance for home and business users. Our experienced technicians ensure your systems run smoothly and efficiently, keeping your work uninterrupted.</p>
+        </div>
+    </section>
 
-    {/* Divider */}
-    <div class="border-t border-secondary-foreground/20 pt-8">
-      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-sm text-secondary-foreground/70">
-          &copy; 2026 NextGrid Technologies. All rights reserved.
-        </p>
-        <B12Link />
-      </div>
-    </div>
-  </div>
-</footer>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:support@computerservices.com">support@computerservices.com</a></p>
+            <p>Phone: +1-234-567-8901</p>
+            <a href="mailto:support@computerservices.com" class="btn">Send Email</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Computer Support & Maintenance Services</p>
+        </div>
+    </footer>
+</body>
+</html>
