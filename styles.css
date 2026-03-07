@@ -1065,3 +1065,34 @@ body.blog-page .btn-small {
     width: 90%;
   }
 }
+
+/* =========================
+   BLOG LIST STYLING
+========================= */
+
+/* All unordered and ordered lists inside blog pages */
+body.blog-page ul,
+body.blog-page ol {
+  list-style-position: outside; /* ensures bullets/numbers are outside */
+  list-style-type: disc;        /* default bullet style for ul */
+  padding-left: 40px;           /* consistent indentation from left */
+  margin-bottom: 16px;
+  text-align: left;             /* aligns text left */
+  color: #cce0ff;               /* readable light bluish text */
+}
+
+/* Space between list items */
+body.blog-page ul li,
+body.blog-page ol li {
+  margin-bottom: 12px;
+  line-height: 1.6;             /* makes lists more readable */
+}
+
+/* Optional: different bullet style for nested lists */
+body.blog-page ul ul {
+  list-style-type: circle;
+}
+
+body.blog-page ul ul li {
+  margin-bottom: 8px;
+}
