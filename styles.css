@@ -1518,4 +1518,17 @@ color: #555;
 grid-template-columns: 1fr;
 }
 }
+.support-section{
+padding:60px 20px;
+}
 
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+gap:30px;
+margin-top:40px;
+}
+.tech-card .icon{
+font-size:32px;
+margin-bottom:10px;
+}
