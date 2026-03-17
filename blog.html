@@ -209,31 +209,35 @@ Get in touch with us for IT support, security checks, or inquiries.
 
 </div>
 <footer>
-<div class="container">
-<p>© 2026 NextGrid Technologies</p>
-</div>
-</footer>
-
 <a href="https://wa.me/27680330794" class="whatsapp" target="_blank">💬</a>
-<script>
-function scrollToTop() {
-window.scrollTo({
-top: 0,
-behavior: "smooth"
-});
-}
+<button id="backToTopBtn" onclick="scrollToTop()">↑</button>
 
-window.onscroll = function() {
+<script>
 const btn = document.getElementById("backToTopBtn");
 
-if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-btn.style.display = "block";
-} else {
-btn.style.display = "none";
+window.addEventListener("scroll", function() {
+  if (window.scrollY > 200) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+});
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 }
-};
 </script>
-  
+  <script>
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
+</script>
+>
 </body>
 </html>
-
