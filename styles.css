@@ -1176,48 +1176,6 @@ body.blog-page ol li:hover::marker {
   background-color: #333;
 }
 
-/* =========================
-   WHO WE HELP SECTION
-========================= */
-
-.who-section {
-  background: #dbeeff; /* light blue background */
-  padding: 30px 20px;  /* further reduced vertical space */
-  text-align: center;
-}
-
-.who-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px; /* spacing between cards */
-  margin-top: 20px;
-}
-
-.who-card {
-  background: white;
-  padding: 15px 20px; /* reduced padding inside cards */
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); /* smaller shadow for compact feel */
-  transition: all 0.3s ease;
-  text-align: left; /* optional: left-align text for compactness */
-}
-
-.who-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
-
-.who-card h3 {
-  color: #0f172a;
-  margin-bottom: 6px; /* tighter spacing */
-  font-size: 18px;    /* slightly smaller heading */
-}
-
-.who-card p {
-  color: #475569;
-  font-size: 14px;   /* slightly smaller text */
-  margin-bottom: 6px; /* less spacing under paragraph */
-}
 
 /* =========================
    COMMON PROBLEMS SECTION - Tighter spacing
@@ -1388,35 +1346,49 @@ color: white;
 cursor: default;
 }
 
-/* ===============================
-   Who We Help Section
-================================ */
+/* =========================
+   WHO WE HELP SECTION
+========================= */
 
 .who-section {
-padding: 60px 0;
-background: #f4f7fb;
-text-align: center;
+  background: #dbeeff; /* light blue background */
+  padding: 30px 20px;  /* further reduced vertical space */
+  text-align: center;
 }
 
 .who-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-gap: 25px;
-margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px; /* spacing between cards */
+  margin-top: 20px;
 }
 
 .who-card {
-background: #ffffff;
-padding: 25px;
-border-radius: 8px;
-box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-border-top: 4px solid #0078d4;
+  background: white;
+  padding: 15px 20px; /* reduced padding inside cards */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); /* smaller shadow for compact feel */
+  transition: all 0.3s ease;
+  text-align: left; /* optional: left-align text for compactness */
+}
+
+.who-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 .who-card h3 {
-margin-bottom: 10px;
-color: #1d3557;
+  color: #0f172a;
+  margin-bottom: 6px; /* tighter spacing */
+  font-size: 18px;    /* slightly smaller heading */
 }
+
+.who-card p {
+  color: #475569;
+  font-size: 14px;   /* slightly smaller text */
+  margin-bottom: 6px; /* less spacing under paragraph */
+}
+
 
 
 
