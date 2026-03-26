@@ -121,6 +121,9 @@ nav a {
 }
 
 .hero {
+   position: relative;
+  text-align: center;
+  padding: 180px 20px 120px 20px;
   background: linear-gradient(
       rgba(13, 27, 42, 0.85),
       rgba(13, 27, 42, 0.85)
@@ -128,11 +131,6 @@ nav a {
     url("header-bg.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  color: white;
-  text-align: center;
-  padding: 180px 20px 120px 20px;
-  position: relative;
 }
 
 .hero h2 {
