@@ -2333,3 +2333,66 @@ section p {
 .testimonials-grid {
   gap: 20px; /* instead of 30px */
 }
+
+/* === Global Section Spacing Reduction === */
+section,
+.hero,
+.who-section,
+.problems-section,
+.areas-section,
+.m365-section,
+.support-section,
+.mission-section,
+.trust-section,
+.cta-section,
+.about-section,
+.topics-section,
+.blog-section {
+    padding-top: 40px !important;    /* smaller top padding */
+    padding-bottom: 40px !important; /* smaller bottom padding */
+}
+
+/* Reduce gap inside grids */
+.who-grid,
+.why-grid,
+.mission-grid,
+.trust-grid,
+.support-section .grid,
+.m365-grid {
+    gap: 15px !important; /* tighten cards */
+}
+
+/* Reduce margin for headings inside sections */
+section h1,
+section h2,
+section h3,
+section h4,
+section h5,
+section h6,
+.section-intro,
+.hero-content h1,
+.hero-content h2,
+.hero-content p,
+.hero-content .btn-primary {
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+}
+
+/* Reduce card padding */
+.who-card,
+.m365-card,
+.about-card,
+.why-card,
+.trust-card,
+.mission-card,
+.support-section .card.tech-card,
+.blog-card {
+    padding: 15px !important;
+}
+
+/* Optional: reduce spacing between lists */
+.problem-list li,
+.areas-list li {
+    margin-bottom: 5px !important;
+    padding: 8px 12px !important;
+}
