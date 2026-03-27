@@ -177,21 +177,35 @@ We’ll check your Microsoft 365 setup and identify security risks before they b
 </section>
   
 <section id="contact">
-<div class="container contact-wrapper" style="text-align: center;">
-<h2>Contact Us</h2>
+<div class="container contact-wrapper">
+
+<h2>Request Services</h2>
+
 <p class="contact-subtext">
-Get in touch with us for IT support, security checks, or inquiries.
+Get in touch for IT support, Microsoft 365 security, or a free security check.
 </p>
-<form action="https://formspree.io/f/xjgezydg" method="POST">
+
+<form action="https://formspree.io/f/xjgezydg" method="POST" class="contact-form">
+
 <input type="text" name="name" placeholder="Your Name" required>
+
 <input type="email" name="email" placeholder="Business Email" required>
+
+<input type="tel" name="phone" placeholder="Phone Number" required>
+
 <input type="text" name="company" placeholder="Company Name" required>
-<textarea name="message" placeholder="How can we help?" required></textarea>
-<button type="submit" class="btn-primary">Submit</button>
+
+<textarea name="message" placeholder="Tell us about your IT needs..." required></textarea>
+
+<button type="submit" class="btn-primary">Submit Request</button>
+
 </form>
+
 </div>
 </section>
 
+
+</main>
 <div class="bottom-nav">
 
 <a href="index.html">
@@ -248,7 +262,7 @@ Get in touch with us for IT support, security checks, or inquiries.
 </div>
 
 <!-- Back to Top -->
-<button class="hamburger" id="hamburger" aria-label="Toggle navigation">☰</button>
+<button id="backToTopBtn" onclick="scrollToTop()">↑</button>
 
   <script>
 // Toggle Chat
