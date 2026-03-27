@@ -95,10 +95,9 @@ nav a:hover { color: var(--accent-2); text-decoration: underline; }
 }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(2,6,23,0.6), rgba(16,185,129,0.25)); z-index: 2; }
 .hero-content { position: relative; z-index: 3; max-width: 800px; }
-.hero-content h1 { font-size: 2.8rem; animation: fadeInUp 1s ease forwards; }
+.hero-content h1 { font-size: 2.8rem; animation: fadeInUp 1s ease forwards; color:#fff; }
 .hero-content p { font-size: 1.1rem; color: var(--text-light); animation: fadeInUp 1s ease 0.4s forwards; }
 .hero-buttons { margin-top: 30px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-.hero-trust { margin-top: 20px; font-size: 14px; color: var(--text-light); }
 
 .btn-primary, .btn-secondary, .cta-btn, .cta-phone {
   padding: 12px 28px; border-radius: 6px; font-weight: 600; text-decoration: none; transition: all 0.3s ease;
@@ -121,27 +120,32 @@ nav a:hover { color: var(--accent-2); text-decoration: underline; }
 }
 
 /* ========= GRIDS & CARDS ========= */
-.who-grid, .why-grid, .m365-grid, .trust-grid, .cert-grid, .process-grid, .services-grid, .grid {
+.who-grid, .why-grid, .m365-grid, .trust-grid, .cert-grid, .process-grid, .services-grid, .grid,
+.service-grid, .testimonial-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px; margin-top: 30px;
 }
-.who-card, .why-card, .m365-card, .trust-card, .cert-card, .process-card, .card.tech-card {
-  background: white; padding: 25px; border-radius: 12px;
+.who-card, .why-card, .m365-card, .trust-card, .cert-card, .process-card, .card.tech-card,
+.service-card, .testimonial-card {
+  background: white; padding: 1.5rem; border-radius: 12px;
   box-shadow: 0 10px 25px rgba(2,6,23,0.06);
   border: 1px solid #e2f5ef;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   text-align: left;
 }
-.who-card:hover, .why-card:hover, .m365-card:hover, .trust-card:hover, .cert-card:hover, .process-card:hover, .card.tech-card:hover {
+.who-card:hover, .why-card:hover, .m365-card:hover, .trust-card:hover, .cert-card:hover, .process-card:hover, .card.tech-card:hover,
+.service-card:hover, .testimonial-card:hover {
   transform: translateY(-6px); 
   box-shadow: 0 15px 35px rgba(2,6,23,0.1);
   border-color: var(--accent-2);
 }
-.who-card h3, .why-card h3, .m365-card h3, .trust-card h3, .cert-card h3, .process-card h3, .card.tech-card h3 {
+.who-card h3, .why-card h3, .m365-card h3, .trust-card h3, .cert-card h3, .process-card h3, .card.tech-card h3,
+.service-card h3, .testimonial-card h3 {
   color: var(--text);
 }
-.who-card p, .why-card p, .m365-card p, .trust-card p, .cert-card p, .process-card p, .card.tech-card p {
+.who-card p, .why-card p, .m365-card p, .trust-card p, .cert-card p, .process-card p, .card.tech-card p,
+.service-card p, .testimonial-card p {
   color: var(--muted); font-size: 15px;
 }
 .card.tech-card .icon { font-size: 28px; margin-bottom: 10px; }
@@ -183,26 +187,11 @@ nav a:hover { color: var(--accent-2); text-decoration: underline; }
   font-size: 1.1rem;
   color: var(--muted);
 }
+
 /* Blog article readability — applies to all posts */
-.blog-article,
-.blog-article *,
-.container .blog-article + p,
-.container p,
-.container li {
-  color: #333 !important;
-}
+.blog-article h2 { color:#111; margin-top: 2rem; }
+.blog-article p, .blog-article li { color:#334155; }
 
-.blog-article h2,
-.container h2 {
-  color:#111 !important;
-  margin-top: 2rem;
-}
-
-/* Keep hero text white */
-.hero-content h1,
-.hero-content p { 
-  color:#fff !important; 
-}
 /* ========= PROBLEM / SOLUTION ========= */
 .problems-section, .problem-solution { background: white; }
 .problem-grid, .solution-grid {
@@ -219,7 +208,8 @@ nav a:hover { color: var(--accent-2); text-decoration: underline; }
 .problem-warning { margin-top: 20px; color: #dc2626; font-weight: 600; }
 
 /* ========= SERVICE AREAS ========= */
-.areas-section { background: var(--bg-light); }
+.areas { padding: 4rem 1rem; background: #f8fafc; }
+.areas .section-intro { font-weight:600; color:#333; }
 .areas-list {
   list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 25px;
 }
@@ -231,8 +221,13 @@ nav a:hover { color: var(--accent-2); text-decoration: underline; }
 
 /* ========= SUPPORT / CTA SUPPORT ========= */
 .cta-support {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+.support-section .cta-support {
   background: linear-gradient(135deg, #1f3a5f, #064e3b);
   color: white; border-radius: 12px;
+  padding: 30px 20px;
 }
 .support-section .section-intro, .cta-support .section-intro { color: #ccfbf1; font-style: italic; }
 .support-section .grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 30px; }
@@ -249,15 +244,10 @@ nav a:hover { color: var(--accent-2); text-decoration: underline; }
 .support-section .card.tech-card.highlight { border: 2px solid var(--accent-2); }
 
 /* ========= TESTIMONIALS ========= */
-.testimonials-section { background: #ecfeff; }
+.testimonials { padding: 4rem 1rem; background: #f8fafc; }
 .testimonials-grid {
   display: flex; gap: 30px; overflow: hidden; justify-content: center;
   animation: scrollLeft 25s linear infinite;
-}
-.testimonial-card {
-  background: white; padding: 25px; border-radius: 10px; min-width: 300px; flex-shrink: 0;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  border: 1px solid #d1fae5;
 }
 .testimonial-card p { color: var(--muted); margin-bottom: 15px; }
 .testimonial-card h4 { color: var(--text); font-weight: 600; }
@@ -382,12 +372,6 @@ footer { background: var(--bg-dark); color: #94a3b8; text-align: center; padding
   border-left: 4px solid #22c55e;
   padding-left: 12px;
 }
-.blog-page .blog-article p {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: #334155;
-  margin-bottom: 1.2rem;
-}
 .blog-page .blog-article ul.tech-list {
   list-style: none;
   padding: 0;
@@ -406,27 +390,9 @@ footer { background: var(--bg-dark); color: #94a3b8; text-align: center; padding
   display: block;
   margin-bottom: 6px;
 }
-.blog-page .cta-support {
-  text-align: center;
-  margin-top: 2.5rem;
-}
-.services-snapshot, .why-us, .testimonials, .areas {
-  padding: 4rem 1rem;
-  background: #f8fafc;
-}
-.services-snapshot .service-grid,
-.testimonials .testimonial-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:1.5rem;
-  margin-top:2rem;
-}
-.service-card, .testimonial-card {
-  background:#fff;
-  padding:1.5rem;
-  border-radius:12px;
-  box-shadow:0 4px 12px rgba(0,0,0,.05);
-}
+
+/* Services snapshot */
+.services-snapshot { padding: 4rem 1rem; background: #f8fafc; }
 .check-list {
   list-style:none;
   padding:0;
@@ -447,4 +413,3 @@ footer { background: var(--bg-dark); color: #94a3b8; text-align: center; padding
   font-weight:700;
 }
 .cta-center { text-align:center; margin-top:2rem; }
-.areas .section-intro { font-weight:600; color:#333; }
