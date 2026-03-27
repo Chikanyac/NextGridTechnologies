@@ -255,7 +255,61 @@ nav a:hover { color: var(--accent-2); text-decoration: underline; }
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+.testimonials {
+  padding: 4rem 1rem;
+  background: #f8fafc;
+  overflow: hidden;
+}
 
+.testimonial-slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonial-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: scroll-left 30s linear infinite;
+}
+
+/* Pause on hover */
+.testimonial-slider:hover .testimonial-track {
+  animation-play-state: paused;
+}
+
+.testimonial-card {
+  background:#fff;
+  padding:1.5rem;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,.05);
+  min-width: 300px;
+  flex-shrink: 0;
+}
+
+.testimonial-card p {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.testimonial-card span {
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* On mobile, slow it down a bit */
+@media (max-width: 768px) {
+  .testimonial-track {
+    animation-duration: 45s;
+  }
+}
 /* ========= RESULTS ========= */
 .results { 
   background: linear-gradient(135deg, var(--bg-dark), #042f2e);
